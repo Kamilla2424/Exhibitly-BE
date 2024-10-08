@@ -1,6 +1,8 @@
 const express = require('express')
 const cors = require('cors')
-const { postUser, getUser } = require('./controllers/user-controller.js')
+const connect = require('./database/connection')
+
+connect()
 
 const app = express()
 app.use(express.json())
