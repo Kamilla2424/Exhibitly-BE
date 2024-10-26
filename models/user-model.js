@@ -20,7 +20,8 @@ async function fetchUser(id) {
     const newBody = {
       id: id,
       display_name: display_name,
-      image: image
+      email_address: email_address,
+      password: password
     };
     const newUser = new User(newBody);
     await newUser.save();
