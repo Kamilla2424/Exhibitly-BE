@@ -1,4 +1,4 @@
-const { saveUser, fetchUser } = require("../models/user.model.js");
+const { saveUser, fetchUser } = require("../models/user-model.js");
 
 function postUser(req, res) {
     saveUser(req.body)
