@@ -1,7 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const connect = require('./database/connection')
-const { getUser, postUser } = require('./controllers/user-controller')
+const { getUsers, postUser } = require('./controllers/user-controller')
 
 connect()
 
@@ -15,7 +15,7 @@ app.get('/api/healthCheck', (req,res)=>{
 
 app.post('api/users', postUser)
 
-app.get('/api/users/:id', getUser)
+app.get('/api/users', getUsers)
 
 app.listen(9090, () => {
     console.log('Server started on port 9090');

@@ -3,12 +3,11 @@ const connect = require("../database/connection.js");
 const User = require("../mongoose-models/user.js");
 const axios = require("axios");
 
-async function fetchUser(id) {
+async function fetchUsers() {
     await connect();
     try {
-      const user = await User.findOne({ id });
-      mongoose.disconnect();
-      return user;
+      const users = await User.find({});
+      return users
     } catch (err) {
       console.log(err);
     }
@@ -29,4 +28,4 @@ async function fetchUser(id) {
     return newUser;
   }
 
-  module.exports = { saveUser, fetchUser }
+  module.exports = { saveUser, fetchUsers }
