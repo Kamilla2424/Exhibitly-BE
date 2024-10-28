@@ -14,7 +14,7 @@ async function fetchUsers() {
     mongoose.disconnect();
   }
   
-  async function saveUser() {
+  async function saveUser(userData) {
     await connect();
     const newBody = {
       id: id,
