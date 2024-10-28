@@ -15,7 +15,7 @@ app.get('/api/healthCheck', (req,res)=>{
 
 app.post('/api/users', postUser)
 
-router.get('/api/users', getUsers)
+app.get('/api/users', getUsers)
 
 app.listen(9090, () => {
     console.log('Server started on port 9090');
