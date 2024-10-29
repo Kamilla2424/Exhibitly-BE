@@ -17,8 +17,7 @@ async function fetchUsers() {
   async function saveUser(userData) {
     await connect();
     const newBody = {
-      id: id,
-      display_name: display_name,
+      useranme: username,
       email_address: email_address,
       password: password
     };
