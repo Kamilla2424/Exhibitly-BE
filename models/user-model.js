@@ -18,13 +18,13 @@ async function fetchUsers() {
     await connect();
     const newBody = {
       id: Math.random().toString(16).slice(2),  
-      useranme: userData.username,
+      username: userData.username,
       email_address: userData.email_address,
       password: userData.password
     };
     console.log(newBody, "newbody")
-    // const newUser = new User(newBody);
-    // await newUser.save();
+    const newUser = new User(newBody);
+    await newUser.save();
     mongoose.disconnect();
     return newBody;
   }
