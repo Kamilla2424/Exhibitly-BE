@@ -1,6 +1,7 @@
 const { saveUser, fetchUsers } = require("../models/user-model.js");
 
 function postUser(req, res) {
+    console.log(req.body.username)
     saveUser(req.body)
         .then((user) => {
             res.status(201).send({ user })

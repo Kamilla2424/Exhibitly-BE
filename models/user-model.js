@@ -17,14 +17,15 @@ async function fetchUsers() {
   async function saveUser(userData) {
     await connect();
     const newBody = {
-      useranme: username,
-      email_address: email_address,
-      password: password
+      useranme: userData.username,
+      email_address: userData.email_address,
+      password: userData.password
     };
-    const newUser = new User(newBody);
-    await newUser.save();
+    console.log(newBody, "newbody")
+    // const newUser = new User(newBody);
+    // await newUser.save();
     mongoose.disconnect();
-    return newUser;
+    return newBody;
   }
 
   module.exports = { saveUser, fetchUsers }
