@@ -17,6 +17,7 @@ async function fetchUsers() {
   async function saveUser(userData) {
     await connect();
     const newBody = {
+      id: Math.random().toString(16).slice(2),  
       useranme: userData.username,
       email_address: userData.email_address,
       password: userData.password
