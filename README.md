@@ -34,12 +34,12 @@ Set up the frontend from this repo: [Exhibitly Frontend](https://github.com/Kami
 
 1. Clone the backend repository to your local machine:
     ```bash
-    git clone https://github.com/your-username/exhibitly-backend.git
+    git clone https://github.com/Kamilla2424/Exhibitly-BE
     ```
 
 2. Navigate into the backend project directory:
     ```bash
-    cd exhibitly-backend
+    cd Exhibitly-BE
     ```
 
 3. Install dependencies:
@@ -68,7 +68,7 @@ Set up the frontend from this repo: [Exhibitly Frontend](https://github.com/Kami
 
    - Clone the backend repository:
      ```bash
-     git clone https://github.com/your-username/exhibitly-backend.git
+     git clone https://github.com/Kamilla2424/Exhibitly-BE
      ```
 
    - Navigate into the backend directory:
@@ -133,9 +133,5 @@ The backend exposes the following endpoints:
 | `GET /api/users`     | Get all users                    |
 | `POST /api/users`    | Register a new user              |
 
----
 
-## Deployment
 
-- **Frontend**: [https://exhibitly-fe.onrender.com](https://exhibitly-fe.onrender.com)
-- **Backend**: [https://exhibitly-be.onrender.com](https://exhibitly-be.onrender.com)
