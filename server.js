@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const connect = require('./database/connection')
 const { getUsers, postUser } = require('./controllers/user-controller')
+const path = require('path')
 
 connect()
 
