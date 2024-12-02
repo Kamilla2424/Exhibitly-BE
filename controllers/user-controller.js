@@ -10,10 +10,10 @@ function postUser(req, res) {
         })
 }
 
-function getUsers(req, res) {
-    fetchUsers().then((users) => {
-        res.status(200).send({users})
+function loginUser(req, res) {
+    fetchUsers(req.body).then(({user}) => {
+        res.status(200).send({user})
     })
 }
 
-module.exports= { postUser, getUsers }
+module.exports = { postUser, loginUser }
