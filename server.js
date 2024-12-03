@@ -15,7 +15,7 @@ app.get('/api/healthCheck', (req,res)=>{
 
 app.post('/api/user', postUser)
 
-app.get('/api/login', loginUser)
+app.post('/api/login', loginUser)
 
 app.get('/api/*' , (req,res) => {
     res.status(400).send({msg:"no route found"})
