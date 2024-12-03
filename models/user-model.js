@@ -5,25 +5,17 @@ const axios = require("axios");
 
 async function fetchUsers(userData) {
     await connect();
-    
-    if(!userData.username || !userData.password) {
-      mongoose.disconnect()
-      throw new Error('Username and password are required')
-    }
     try {
       const user = await User.findOne({username: userData.username})
       if(!user) {
         mongoose.disconnect()
         throw new Error('Invalid username or password')
       }
-  
       if(user && !(userData.password === user.password)) {
         mongoose.disconnect()
         throw new Error('Invalid username or password')
       }
-
       return {user: {id: user.id, username: user.username}} 
-    
     } catch(err){
       console.error(err)
     }
