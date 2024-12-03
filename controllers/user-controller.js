@@ -4,7 +4,10 @@ function loginUser(req, res) {
     checkUser(req.body).then(({user}) => {
         res.status(200).send({user})
     }).catch((err) => {
-        if(err.message === 'Invalid username or password'){
+        if(err.message === 'Invalid username'){
+            return res.status(400).send({msg: err.message})
+        }
+        if(err.message === 'Invalid password'){
             return res.status(400).send({msg: err.message})
         }
         console.error(err)
