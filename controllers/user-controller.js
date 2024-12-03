@@ -1,7 +1,7 @@
-const { saveUser, fetchUsers } = require("../models/user-model.js");
+const { saveUser, checkUser } = require("../models/user-model.js");
 
 function loginUser(req, res) {
-    fetchUsers(req.body).then(({user}) => {
+    checkUser(req.body).then(({user}) => {
         res.status(200).send({user})
     }).catch((err) => {
         if(err.message === 'Invalid username or password'){
